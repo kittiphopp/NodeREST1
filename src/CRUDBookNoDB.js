@@ -47,7 +47,7 @@ app.post('/books' , (req,res) => {
         title : req.body.title,
         author : req.body.author
     };
-    book.push(book);
+    books.push(book);
     res.send(book);
 });
 
