@@ -51,7 +51,8 @@ app.post('/books' , (req,res) => {
     res.send(book);
 });
 
-app.put('/book/:id',(req,res) => {
+// route to update a book
+app.put('/books/:id',(req,res) => {
     const book = books.find(b => b.id === parseInt(req.params.id));
     if (!book) res.status(404).send('Book not found');
     book.title = req.body.title;
